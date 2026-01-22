@@ -4,7 +4,11 @@
             "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/**",
-                "${workspaceFolder}/Include/**"
+                "${workspaceFolder}/Include/**",
+                "${workspaceFolder}/mbed-os/**",
+                "/usr/local/gcc-arm/arm-none-eabi/include/**",
+                "/usr/local/gcc-arm/arm-none-eabi/include/c++/15.2.1/tr1/**"
+
             ],
             "defines": [],
             "compilerPath": "/usr/local/gcc-arm/bin/arm-none-eabi-gcc",

@@ -3,6 +3,7 @@
 
 #include "mbed.h"
 
+
 class LTR390 {
 public:
     LTR390(PinName sda, PinName scl);
@@ -12,10 +13,12 @@ public:
     int configureMode(uint8_t mode);
     int readUVData(uint32_t &data, char *raw_data);
     int verifyCommunication();
-
+    bool init();
 private:
     I2C i2c;
     const int LTR390_I2C_ADDR = 0x1C << 1;
 };
+
+
 
 #endif

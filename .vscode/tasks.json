@@ -2,17 +2,17 @@
 {
 	"version": "2.0.0",
 	"tasks": [
-		// Build for target MbedCEHelloWorld
+		// Build for target PRI_Data_Logger
 		{
-			"label": "Build MbedCEHelloWorld",
+			"label": "Build PRI_Data_Logger",
 			"type": "shell",
 			"command": "/usr/bin/cmake",
-			"args": ["--build", "/media/lucien/Windows/Users/lucie/Documents/Cours/ISIE/5A/PRI_Data_Logger/3_Conception_Detaillee/3.1_Logiciel/mbed_PRI_Data_Logger_Projet/build", "--target", "MbedCEHelloWorld"],
+			"args": ["--build", "/media/lucien/Windows/Users/lucie/Documents/Cours/ISIE/5A/PRI_Data_Logger/3_Conception_Detaillee/3.1_Logiciel/mbed_PRI_Data_Logger_Projet/build", "--target", "PRI_Data_Logger"],
 		},
-		// Build MbedCEHelloWorld and run the GDB server
+		// Build PRI_Data_Logger and run the GDB server
 		{
-			"label": "Build MbedCEHelloWorld and start GDB server",
-			"dependsOn": ["Build MbedCEHelloWorld", "GDB Server"],
+			"label": "Build PRI_Data_Logger and start GDB server",
+			"dependsOn": ["Build PRI_Data_Logger", "GDB Server"],
 			"dependsOrder": "sequence",
 		},
 		{

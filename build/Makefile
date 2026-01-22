@@ -117,30 +117,43 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named MbedCEHelloWorld
+# Target rules for targets named PRI_Data_Logger
 
 # Build rule for target.
-MbedCEHelloWorld: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 MbedCEHelloWorld
-.PHONY : MbedCEHelloWorld
+PRI_Data_Logger: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 PRI_Data_Logger
+.PHONY : PRI_Data_Logger
 
 # fast build rule for target.
-MbedCEHelloWorld/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MbedCEHelloWorld.dir/build.make CMakeFiles/MbedCEHelloWorld.dir/build
-.PHONY : MbedCEHelloWorld/fast
+PRI_Data_Logger/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PRI_Data_Logger.dir/build.make CMakeFiles/PRI_Data_Logger.dir/build
+.PHONY : PRI_Data_Logger/fast
 
 #=============================================================================
-# Target rules for targets named flash-MbedCEHelloWorld
+# Target rules for targets named generate_timestamp
 
 # Build rule for target.
-flash-MbedCEHelloWorld: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 flash-MbedCEHelloWorld
-.PHONY : flash-MbedCEHelloWorld
+generate_timestamp: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 generate_timestamp
+.PHONY : generate_timestamp
 
 # fast build rule for target.
-flash-MbedCEHelloWorld/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/flash-MbedCEHelloWorld.dir/build.make CMakeFiles/flash-MbedCEHelloWorld.dir/build
-.PHONY : flash-MbedCEHelloWorld/fast
+generate_timestamp/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/generate_timestamp.dir/build.make CMakeFiles/generate_timestamp.dir/build
+.PHONY : generate_timestamp/fast
+
+#=============================================================================
+# Target rules for targets named flash-PRI_Data_Logger
+
+# Build rule for target.
+flash-PRI_Data_Logger: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 flash-PRI_Data_Logger
+.PHONY : flash-PRI_Data_Logger
+
+# fast build rule for target.
+flash-PRI_Data_Logger/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/flash-PRI_Data_Logger.dir/build.make CMakeFiles/flash-PRI_Data_Logger.dir/build
+.PHONY : flash-PRI_Data_Logger/fast
 
 #=============================================================================
 # Target rules for targets named mbed-baremetal
@@ -675,36 +688,12 @@ mbed-greentea-io/fast:
 	$(MAKE) $(MAKESILENT) -f mbed-os/features/frameworks/mbed-greentea-io/CMakeFiles/mbed-greentea-io.dir/build.make mbed-os/features/frameworks/mbed-greentea-io/CMakeFiles/mbed-greentea-io.dir/build
 .PHONY : mbed-greentea-io/fast
 
-main.obj: main.cpp.obj
-.PHONY : main.obj
-
-# target to build an object file
-main.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MbedCEHelloWorld.dir/build.make CMakeFiles/MbedCEHelloWorld.dir/main.cpp.obj
-.PHONY : main.cpp.obj
-
-main.i: main.cpp.i
-.PHONY : main.i
-
-# target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MbedCEHelloWorld.dir/build.make CMakeFiles/MbedCEHelloWorld.dir/main.cpp.i
-.PHONY : main.cpp.i
-
-main.s: main.cpp.s
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MbedCEHelloWorld.dir/build.make CMakeFiles/MbedCEHelloWorld.dir/main.cpp.s
-.PHONY : main.cpp.s
-
 src/BME680.obj: src/BME680.cpp.obj
 .PHONY : src/BME680.obj
 
 # target to build an object file
 src/BME680.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MbedCEHelloWorld.dir/build.make CMakeFiles/MbedCEHelloWorld.dir/src/BME680.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PRI_Data_Logger.dir/build.make CMakeFiles/PRI_Data_Logger.dir/src/BME680.cpp.obj
 .PHONY : src/BME680.cpp.obj
 
 src/BME680.i: src/BME680.cpp.i
@@ -712,7 +701,7 @@ src/BME680.i: src/BME680.cpp.i
 
 # target to preprocess a source file
 src/BME680.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MbedCEHelloWorld.dir/build.make CMakeFiles/MbedCEHelloWorld.dir/src/BME680.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PRI_Data_Logger.dir/build.make CMakeFiles/PRI_Data_Logger.dir/src/BME680.cpp.i
 .PHONY : src/BME680.cpp.i
 
 src/BME680.s: src/BME680.cpp.s
@@ -720,7 +709,7 @@ src/BME680.s: src/BME680.cpp.s
 
 # target to generate assembly for a file
 src/BME680.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MbedCEHelloWorld.dir/build.make CMakeFiles/MbedCEHelloWorld.dir/src/BME680.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PRI_Data_Logger.dir/build.make CMakeFiles/PRI_Data_Logger.dir/src/BME680.cpp.s
 .PHONY : src/BME680.cpp.s
 
 src/LTR390.obj: src/LTR390.cpp.obj
@@ -728,7 +717,7 @@ src/LTR390.obj: src/LTR390.cpp.obj
 
 # target to build an object file
 src/LTR390.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MbedCEHelloWorld.dir/build.make CMakeFiles/MbedCEHelloWorld.dir/src/LTR390.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PRI_Data_Logger.dir/build.make CMakeFiles/PRI_Data_Logger.dir/src/LTR390.cpp.obj
 .PHONY : src/LTR390.cpp.obj
 
 src/LTR390.i: src/LTR390.cpp.i
@@ -736,7 +725,7 @@ src/LTR390.i: src/LTR390.cpp.i
 
 # target to preprocess a source file
 src/LTR390.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MbedCEHelloWorld.dir/build.make CMakeFiles/MbedCEHelloWorld.dir/src/LTR390.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PRI_Data_Logger.dir/build.make CMakeFiles/PRI_Data_Logger.dir/src/LTR390.cpp.i
 .PHONY : src/LTR390.cpp.i
 
 src/LTR390.s: src/LTR390.cpp.s
@@ -744,7 +733,7 @@ src/LTR390.s: src/LTR390.cpp.s
 
 # target to generate assembly for a file
 src/LTR390.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MbedCEHelloWorld.dir/build.make CMakeFiles/MbedCEHelloWorld.dir/src/LTR390.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PRI_Data_Logger.dir/build.make CMakeFiles/PRI_Data_Logger.dir/src/LTR390.cpp.s
 .PHONY : src/LTR390.cpp.s
 
 src/Memory.obj: src/Memory.cpp.obj
@@ -752,7 +741,7 @@ src/Memory.obj: src/Memory.cpp.obj
 
 # target to build an object file
 src/Memory.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MbedCEHelloWorld.dir/build.make CMakeFiles/MbedCEHelloWorld.dir/src/Memory.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PRI_Data_Logger.dir/build.make CMakeFiles/PRI_Data_Logger.dir/src/Memory.cpp.obj
 .PHONY : src/Memory.cpp.obj
 
 src/Memory.i: src/Memory.cpp.i
@@ -760,7 +749,7 @@ src/Memory.i: src/Memory.cpp.i
 
 # target to preprocess a source file
 src/Memory.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MbedCEHelloWorld.dir/build.make CMakeFiles/MbedCEHelloWorld.dir/src/Memory.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PRI_Data_Logger.dir/build.make CMakeFiles/PRI_Data_Logger.dir/src/Memory.cpp.i
 .PHONY : src/Memory.cpp.i
 
 src/Memory.s: src/Memory.cpp.s
@@ -768,7 +757,7 @@ src/Memory.s: src/Memory.cpp.s
 
 # target to generate assembly for a file
 src/Memory.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MbedCEHelloWorld.dir/build.make CMakeFiles/MbedCEHelloWorld.dir/src/Memory.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PRI_Data_Logger.dir/build.make CMakeFiles/PRI_Data_Logger.dir/src/Memory.cpp.s
 .PHONY : src/Memory.cpp.s
 
 src/SCD41.obj: src/SCD41.cpp.obj
@@ -776,7 +765,7 @@ src/SCD41.obj: src/SCD41.cpp.obj
 
 # target to build an object file
 src/SCD41.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MbedCEHelloWorld.dir/build.make CMakeFiles/MbedCEHelloWorld.dir/src/SCD41.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PRI_Data_Logger.dir/build.make CMakeFiles/PRI_Data_Logger.dir/src/SCD41.cpp.obj
 .PHONY : src/SCD41.cpp.obj
 
 src/SCD41.i: src/SCD41.cpp.i
@@ -784,7 +773,7 @@ src/SCD41.i: src/SCD41.cpp.i
 
 # target to preprocess a source file
 src/SCD41.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MbedCEHelloWorld.dir/build.make CMakeFiles/MbedCEHelloWorld.dir/src/SCD41.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PRI_Data_Logger.dir/build.make CMakeFiles/PRI_Data_Logger.dir/src/SCD41.cpp.i
 .PHONY : src/SCD41.cpp.i
 
 src/SCD41.s: src/SCD41.cpp.s
@@ -792,7 +781,7 @@ src/SCD41.s: src/SCD41.cpp.s
 
 # target to generate assembly for a file
 src/SCD41.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MbedCEHelloWorld.dir/build.make CMakeFiles/MbedCEHelloWorld.dir/src/SCD41.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PRI_Data_Logger.dir/build.make CMakeFiles/PRI_Data_Logger.dir/src/SCD41.cpp.s
 .PHONY : src/SCD41.cpp.s
 
 src/bme68x.obj: src/bme68x.c.obj
@@ -800,7 +789,7 @@ src/bme68x.obj: src/bme68x.c.obj
 
 # target to build an object file
 src/bme68x.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MbedCEHelloWorld.dir/build.make CMakeFiles/MbedCEHelloWorld.dir/src/bme68x.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PRI_Data_Logger.dir/build.make CMakeFiles/PRI_Data_Logger.dir/src/bme68x.c.obj
 .PHONY : src/bme68x.c.obj
 
 src/bme68x.i: src/bme68x.c.i
@@ -808,7 +797,7 @@ src/bme68x.i: src/bme68x.c.i
 
 # target to preprocess a source file
 src/bme68x.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MbedCEHelloWorld.dir/build.make CMakeFiles/MbedCEHelloWorld.dir/src/bme68x.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PRI_Data_Logger.dir/build.make CMakeFiles/PRI_Data_Logger.dir/src/bme68x.c.i
 .PHONY : src/bme68x.c.i
 
 src/bme68x.s: src/bme68x.c.s
@@ -816,8 +805,56 @@ src/bme68x.s: src/bme68x.c.s
 
 # target to generate assembly for a file
 src/bme68x.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MbedCEHelloWorld.dir/build.make CMakeFiles/MbedCEHelloWorld.dir/src/bme68x.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PRI_Data_Logger.dir/build.make CMakeFiles/PRI_Data_Logger.dir/src/bme68x.c.s
 .PHONY : src/bme68x.c.s
+
+src/lib_function.obj: src/lib_function.cpp.obj
+.PHONY : src/lib_function.obj
+
+# target to build an object file
+src/lib_function.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PRI_Data_Logger.dir/build.make CMakeFiles/PRI_Data_Logger.dir/src/lib_function.cpp.obj
+.PHONY : src/lib_function.cpp.obj
+
+src/lib_function.i: src/lib_function.cpp.i
+.PHONY : src/lib_function.i
+
+# target to preprocess a source file
+src/lib_function.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PRI_Data_Logger.dir/build.make CMakeFiles/PRI_Data_Logger.dir/src/lib_function.cpp.i
+.PHONY : src/lib_function.cpp.i
+
+src/lib_function.s: src/lib_function.cpp.s
+.PHONY : src/lib_function.s
+
+# target to generate assembly for a file
+src/lib_function.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PRI_Data_Logger.dir/build.make CMakeFiles/PRI_Data_Logger.dir/src/lib_function.cpp.s
+.PHONY : src/lib_function.cpp.s
+
+src/main.obj: src/main.cpp.obj
+.PHONY : src/main.obj
+
+# target to build an object file
+src/main.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PRI_Data_Logger.dir/build.make CMakeFiles/PRI_Data_Logger.dir/src/main.cpp.obj
+.PHONY : src/main.cpp.obj
+
+src/main.i: src/main.cpp.i
+.PHONY : src/main.i
+
+# target to preprocess a source file
+src/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PRI_Data_Logger.dir/build.make CMakeFiles/PRI_Data_Logger.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
+
+src/main.s: src/main.cpp.s
+.PHONY : src/main.s
+
+# target to generate assembly for a file
+src/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PRI_Data_Logger.dir/build.make CMakeFiles/PRI_Data_Logger.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
 
 # Help Target
 help:
@@ -827,9 +864,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... flash-MbedCEHelloWorld"
+	@echo "... flash-PRI_Data_Logger"
+	@echo "... generate_timestamp"
 	@echo "... mbed-linker-script"
-	@echo "... MbedCEHelloWorld"
+	@echo "... PRI_Data_Logger"
 	@echo "... mbed-baremetal"
 	@echo "... mbed-cellular"
 	@echo "... mbed-coap"
@@ -870,9 +908,6 @@ help:
 	@echo "... mbed-storage-tdbstore"
 	@echo "... mbed-unity"
 	@echo "... mbed-utest"
-	@echo "... main.obj"
-	@echo "... main.i"
-	@echo "... main.s"
 	@echo "... src/BME680.obj"
 	@echo "... src/BME680.i"
 	@echo "... src/BME680.s"
@@ -888,6 +923,12 @@ help:
 	@echo "... src/bme68x.obj"
 	@echo "... src/bme68x.i"
 	@echo "... src/bme68x.s"
+	@echo "... src/lib_function.obj"
+	@echo "... src/lib_function.i"
+	@echo "... src/lib_function.s"
+	@echo "... src/main.obj"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
 .PHONY : help
 
 

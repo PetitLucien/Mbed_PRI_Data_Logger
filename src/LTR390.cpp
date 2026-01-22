@@ -3,7 +3,32 @@
 // Constructeur de la classe LTR390
 LTR390::LTR390(PinName sda, PinName scl) : i2c(sda, scl) {
     // Configuration initiale si necessaire
+
+boool LTR390::init() {
+    // Verifier la communication avec le capteur
+    if(this->verifyCommunication() != 0) {
+        return false; // Echec de la communication
+    }
+    else
+    {
+        if (this->configureResolutionAndRate(0x03, 0x06) != 0) {
+            printf("Erreur : Configuration de la résolution et du taux de mesure du LTR390.\n");
+            return false;
+        }
+        if (this->configureGain(0x0F) != 0) {
+            printf("Erreur : Configuration du gain du LTR390.\n");
+            return false;
+        }
+        if (this->configureMode(0x0A) != 0) {
+            printf("Erreur : Configuration du mode UV du LTR390.\n");
+            return false;
+        }
+
+    }
+    return true; // Succes de l'initialisation
+    
 }
+
 
 // Configurer la resolution et le taux de mesure
 int LTR390::configureResolutionAndRate(uint8_t resolution, uint8_t rate) {

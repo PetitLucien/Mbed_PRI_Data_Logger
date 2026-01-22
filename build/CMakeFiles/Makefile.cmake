@@ -1286,8 +1286,9 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/MbedCEHelloWorld.dir/DependInfo.cmake"
-  "CMakeFiles/flash-MbedCEHelloWorld.dir/DependInfo.cmake"
+  "CMakeFiles/PRI_Data_Logger.dir/DependInfo.cmake"
+  "CMakeFiles/generate_timestamp.dir/DependInfo.cmake"
+  "CMakeFiles/flash-PRI_Data_Logger.dir/DependInfo.cmake"
   "mbed-os/CMakeFiles/mbed-baremetal.dir/DependInfo.cmake"
   "mbed-os/CMakeFiles/mbed-os.dir/DependInfo.cmake"
   "mbed-os/CMakeFiles/mbed-linker-script.dir/DependInfo.cmake"

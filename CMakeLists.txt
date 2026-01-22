@@ -10,6 +10,7 @@ set(ARM_NONE_EABI_TOOLCHAIN_HINTS
 )
 set(STLINK_UPLOAD_ENABLED TRUE CACHE BOOL "Enable ST-Link upload method")
 
+
 #### Initialize Mbed OS build system. ####
 ######################################################################################################
 ### Block of including .json5 files. Files of this block must be included before the app.cmake
@@ -43,7 +44,7 @@ include(mbed-os/tools/cmake/mbed_toolchain_setup.cmake)
 ### Set up your project.
 # The project name will be made available in the ${PROJECT_NAME} variable.
 # If you like, you can specify a version here, which CMake will make available in the ${PROJECT_VERSION} variable.
-project(MbedCEHelloWorld
+project(PRI_Data_Logger
         # VERSION 1.0.0
         LANGUAGES C CXX ASM)
 
@@ -65,22 +66,47 @@ add_subdirectory(mbed-os)
 ## Add another subdirectory, for example subdirectory of a library (if needed)
 #add_subdirectory(YourLibrary)
 
+
 ### End of block
 ######################################################################################################
 
 ### add executable (necessary everytime)
 # This will compile an elf file named the same as the project with the given source files.
 add_executable(${PROJECT_NAME} 
-    main.cpp
+    src/main.cpp
     src/BME680.cpp
     src/bme68x.c
     src/LTR390.cpp
     src/Memory.cpp
     src/SCD41.cpp
+    src/lib_function.cpp
 )
 
-# Add include directories
-target_include_directories(${PROJECT_NAME} PRIVATE ${CMAKE_SOURCE_DIR}/Include)
+target_include_directories(${PROJECT_NAME} PRIVATE
+    ${CMAKE_SOURCE_DIR}/Include
+)
+
+#######################################################################################################
+### Custum actions for getting timestamp
+# Dossier pour fichiers générés
+set(GENERATED_DIR ${CMAKE_BINARY_DIR}/generated)
+
+# Target de génération du timestamp
+add_custom_target(generate_timestamp
+    COMMAND ${CMAKE_COMMAND}
+        -DOUTPUT=${GENERATED_DIR}/timestamp.h
+        -P ${CMAKE_SOURCE_DIR}/generate_timestamp.cmake
+)
+
+# S'assurer que le timestamp est généré avant la compilation
+add_dependencies(${PROJECT_NAME} generate_timestamp)
+
+# Ajouter le dossier généré aux includes
+target_include_directories(${PROJECT_NAME} PRIVATE
+    ${GENERATED_DIR}
+)
+
+### end of custom actions block
 
 ######################################################################################################
 ### Link libraries block
