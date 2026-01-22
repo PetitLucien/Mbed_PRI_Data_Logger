@@ -1,0 +1,2 @@
+/usr/local/gcc-arm/bin/arm-none-eabi-ar qc libmbed-greentea-io.a "CMakeFiles/mbed-greentea-io.dir/mbed_io.cpp.obj"
+/usr/local/gcc-arm/bin/arm-none-eabi-ranlib libmbed-greentea-io.a

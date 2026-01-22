@@ -5,7 +5,7 @@
 	{
 	    "type": "cortex-debug",
 	    "name": "Debug MbedCEHelloWorld NUCLEO_L476RG Develop",
-	    "executable": "/home/lucien/Documents/mbed-ce-hello-world/build/MbedCEHelloWorld.elf",
+	    "executable": "/media/lucien/Windows/Users/lucie/Documents/Cours/ISIE/5A/PRI_Data_Logger/3_Conception_Detaillee/3.1_Logiciel/mbed_PRI_Data_Logger_Projet/build/MbedCEHelloWorld.elf",
 	    "cwd": "${workspaceRoot}",
 	    "gdbPath": "/usr/local/gcc-arm/bin/arm-none-eabi-gdb",
 		"objdumpPath": "/usr/local/gcc-arm/bin/arm-none-eabi-objdump",
@@ -14,7 +14,7 @@
 		"request": "launch",
 		"preLaunchTask": "Build MbedCEHelloWorld and start GDB server",
 		// Override the command sequences used by VS Code to be correct for this GDB server
-		"overrideLaunchCommands": ["monitor halt", "monitor reset", "load \"/home/lucien/Documents/mbed-ce-hello-world/build/MbedCEHelloWorld.hex\"", "tbreak main", "monitor reset"],
+		"overrideLaunchCommands": ["monitor halt", "monitor reset", "load \"/media/lucien/Windows/Users/lucie/Documents/Cours/ISIE/5A/PRI_Data_Logger/3_Conception_Detaillee/3.1_Logiciel/mbed_PRI_Data_Logger_Projet/build/MbedCEHelloWorld.hex\"", "tbreak main", "monitor reset"],
 		"overrideRestartCommands": ["monitor reset"],
 	},
     ]

@@ -70,7 +70,17 @@ add_subdirectory(mbed-os)
 
 ### add executable (necessary everytime)
 # This will compile an elf file named the same as the project with the given source files.
-add_executable(${PROJECT_NAME} main.cpp)
+add_executable(${PROJECT_NAME} 
+    main.cpp
+    src/BME680.cpp
+    src/bme68x.c
+    src/LTR390.cpp
+    src/Memory.cpp
+    src/SCD41.cpp
+)
+
+# Add include directories
+target_include_directories(${PROJECT_NAME} PRIVATE ${CMAKE_SOURCE_DIR}/Include)
 
 ######################################################################################################
 ### Link libraries block

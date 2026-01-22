@@ -5,18 +5,18 @@
 #include "Memory.hpp"
 
 // Définir les broches pour les capteurs et la mémoire
-#define I2C_SDA D14
-#define I2C_SCL D15
-#define SPI_MOSI D11
-#define SPI_MISO D12
-#define SPI_SCLK D13
-#define SPI_CS D10
+#define I2C_SDA_PIN D14
+#define I2C_SCL_PIN D15
+#define SPI_MOSI_PIN D11
+#define SPI_MISO_PIN D12
+#define SPI_SCLK_PIN D13
+#define SPI_CS_PIN D10
 
 // Initialisation des objets pour les capteurs et la mémoire
-LTR390 ltr390(I2C_SDA, I2C_SCL);
-BME680 bme680(I2C_SDA, I2C_SCL);
-SCD41 scd41(I2C_SDA, I2C_SCL);
-Memory memory(SPI_MOSI, SPI_MISO, SPI_SCLK, SPI_CS);
+LTR390 ltr390(I2C_SDA_PIN, I2C_SCL_PIN);
+BME680 bme680(I2C_SDA_PIN, I2C_SCL_PIN);
+SCD41 scd41(I2C_SDA_PIN, I2C_SCL_PIN);
+Memory memory(SPI_MOSI_PIN, SPI_MISO_PIN, SPI_SCLK_PIN, SPI_CS_PIN);
 
 // Fonction pour configurer l'heure actuelle
 void initializeRTC() {
@@ -33,7 +33,7 @@ void getDateTime(char *date_buffer, size_t date_size, char *time_buffer, size_t 
 // Fonction pour écrire une mesure dans la mémoire
 void writeToMemory(const char *date, const char *time, const char *type, int32_t value, uint32_t &memory_address) {
     char data_to_store[64];
-    int len = snprintf(data_to_store, sizeof(data_to_store), "%s,%s,%s:%d\n", date, time, type, value);
+    int len = snprintf(data_to_store, sizeof(data_to_store), "%s,%s,%s:%ld\n", date, time, type, value);
 
     // Vérifier si la mémoire est pleine
     if (memory_address + len > 0x100000) {
@@ -151,13 +151,13 @@ int main() {
         if ((current_time->tm_hour == 8 || current_time->tm_hour == 12 || current_time->tm_hour == 17) && current_time->tm_min == 0 && current_time->tm_sec == 0) {
             if (readLTR390(uv_data)) {
                 writeToMemory(date, time_str, "UV", uv_data, memory_address);
-                printf("%s,%s,UV:%u\n", date, time_str, uv_data);
+                printf("%s,%s,UV:%lu\n", date, time_str, uv_data);
             } else {
                 pc.write("Erreur : Impossible de lire les données UV après 3 tentatives.\n", 61);
             }
             if (readBME680(temperature_bme, humidity_bme, gas_resistance_bme)) {
                 writeToMemory(date, time_str, "H", humidity_bme, memory_address);
-                printf("%s,%s,H:%u\n", date, time_str, humidity_bme);
+                printf("%s,%s,H:%lu\n", date, time_str, humidity_bme);
             } else {
                 pc.write("Erreur : Impossible de lire l'humidité du BME680 après 3 tentatives.\n", 65);
             }
@@ -167,7 +167,7 @@ int main() {
         if ((((current_time->tm_hour >= 8 && current_time->tm_hour <= 17) && current_time->tm_min == 0 && current_time->tm_sec == 0) || ((current_time->tm_hour == 20 || current_time->tm_hour == 23 || current_time->tm_hour == 2 || current_time->tm_hour == 5) && current_time->tm_min == 0 && current_time->tm_sec == 0))) {
             if (readBME680(temperature_bme, humidity_bme, gas_resistance_bme)) {
                 writeToMemory(date, time_str, "T", temperature_bme, memory_address);
-                printf("%s,%s,T:%u\n", date, time_str, temperature_bme);
+                printf("%s,%s,T:%lu\n", date, time_str, temperature_bme);
             } else {
                 pc.write("Erreur : Impossible de lire la température du BME680 après 3 tentatives.\n", 65);
             }
@@ -177,7 +177,7 @@ int main() {
         if (current_time->tm_hour >= 8 && current_time->tm_hour <= 17 && current_time->tm_sec == 0) {
             if (readBME680(temperature_bme, humidity_bme, gas_resistance_bme)) {
                 writeToMemory(date, time_str, "G", gas_resistance_bme, memory_address);
-                printf("%s,%s,COV:%u\n", date, time_str, gas_resistance_bme);
+                printf("%s,%s,COV:%lu\n", date, time_str, gas_resistance_bme);
             } else {
                 pc.write("Erreur : Impossible de lire les données du BME680 après 3 tentatives.\n", 65);
             }

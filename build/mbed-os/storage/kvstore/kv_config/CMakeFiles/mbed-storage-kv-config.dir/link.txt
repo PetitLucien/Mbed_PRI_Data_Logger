@@ -1,0 +1,2 @@
+/usr/local/gcc-arm/bin/arm-none-eabi-ar qc libmbed-storage-kv-config.a "CMakeFiles/mbed-storage-kv-config.dir/source/kv_config.cpp.obj"
+/usr/local/gcc-arm/bin/arm-none-eabi-ranlib libmbed-storage-kv-config.a

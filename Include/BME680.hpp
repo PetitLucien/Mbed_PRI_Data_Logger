@@ -2,7 +2,7 @@
 #define BME680_HPP
 
 #include "mbed.h"
-#include "BME680/bme68x.h" // Inclure la bibliothèque BME680
+#include "bme68x.h" 
 
 class BME680 {
 public:

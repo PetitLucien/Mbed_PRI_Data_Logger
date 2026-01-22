@@ -1,0 +1,2 @@
+/usr/local/gcc-arm/bin/arm-none-eabi-ar qc libmbed-unity.a "CMakeFiles/mbed-unity.dir/frameworks/unity/source/unity.c.obj"
+/usr/local/gcc-arm/bin/arm-none-eabi-ranlib libmbed-unity.a

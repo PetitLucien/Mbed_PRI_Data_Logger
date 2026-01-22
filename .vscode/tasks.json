@@ -7,7 +7,7 @@
 			"label": "Build MbedCEHelloWorld",
 			"type": "shell",
 			"command": "/usr/bin/cmake",
-			"args": ["--build", "/home/lucien/Documents/mbed-ce-hello-world/build", "--target", "MbedCEHelloWorld"],
+			"args": ["--build", "/media/lucien/Windows/Users/lucie/Documents/Cours/ISIE/5A/PRI_Data_Logger/3_Conception_Detaillee/3.1_Logiciel/mbed_PRI_Data_Logger_Projet/build", "--target", "MbedCEHelloWorld"],
 		},
 		// Build MbedCEHelloWorld and run the GDB server
 		{
@@ -42,7 +42,6 @@
 				}
 			],
 		}
-	
 	]
 
 }

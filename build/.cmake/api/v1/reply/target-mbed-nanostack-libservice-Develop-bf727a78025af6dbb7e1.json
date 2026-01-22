@@ -1,0 +1,170 @@
+{
+	"archive" : {},
+	"artifacts" : 
+	[
+		{
+			"path" : "mbed-os/connectivity/libraries/nanostack-libservice/libmbed-nanostack-libservice.a"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"target_include_directories",
+			"target_sources"
+		],
+		"files" : 
+		[
+			"mbed-os/connectivity/libraries/nanostack-libservice/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 4,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 6,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 13,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-Wall -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -Wno-psabi -fmessage-length=0 -fno-exceptions -ffunction-sections -fdata-sections -funsigned-char -fomit-frame-pointer -g3 -mthumb -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -std=gnu11"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 2,
+					"path" : "/media/lucien/Windows/Users/lucie/Documents/Cours/ISIE/5A/PRI_Data_Logger/3_Conception_Detaillee/3.1_Logiciel/mbed_PRI_Data_Logger_Projet/mbed-os/connectivity/libraries/nanostack-libservice/."
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/media/lucien/Windows/Users/lucie/Documents/Cours/ISIE/5A/PRI_Data_Logger/3_Conception_Detaillee/3.1_Logiciel/mbed_PRI_Data_Logger_Projet/mbed-os/connectivity/libraries/nanostack-libservice/./mbed-client-libservice"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/media/lucien/Windows/Users/lucie/Documents/Cours/ISIE/5A/PRI_Data_Logger/3_Conception_Detaillee/3.1_Logiciel/mbed_PRI_Data_Logger_Projet/mbed-os/connectivity/libraries/nanostack-libservice/./mbed-client-libservice/platform"
+				}
+			],
+			"language" : "C",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					1
+				],
+				"standard" : "11"
+			},
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7
+			]
+		}
+	],
+	"id" : "mbed-nanostack-libservice::@a51ec43bfa750d3d4e2b",
+	"name" : "mbed-nanostack-libservice",
+	"nameOnDisk" : "libmbed-nanostack-libservice.a",
+	"paths" : 
+	{
+		"build" : "mbed-os/connectivity/libraries/nanostack-libservice",
+		"source" : "mbed-os/connectivity/libraries/nanostack-libservice"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "mbed-os/connectivity/libraries/nanostack-libservice/source/IPv6_fcf_lib/ip_fsc.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "mbed-os/connectivity/libraries/nanostack-libservice/source/libList/ns_list.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "mbed-os/connectivity/libraries/nanostack-libservice/source/libip4string/ip4tos.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "mbed-os/connectivity/libraries/nanostack-libservice/source/libip4string/stoip4.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "mbed-os/connectivity/libraries/nanostack-libservice/source/libip6string/stoip6.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "mbed-os/connectivity/libraries/nanostack-libservice/source/nsdynmemLIB/nsdynmemLIB.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "mbed-os/connectivity/libraries/nanostack-libservice/source/nsdynmemtracker/nsdynmem_tracker_lib.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "mbed-os/connectivity/libraries/nanostack-libservice/source/nvmHelper/ns_nvm_helper.c",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "STATIC_LIBRARY"
+}
